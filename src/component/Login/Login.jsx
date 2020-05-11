@@ -7,7 +7,7 @@ import * as Yup from 'yup';
 
 import './Login.scss';
 
-export const Login = () => {
+export const Login = ({ login }) => {
   const useStyles = makeStyles({
     root: {
       marginTop: '25px',
@@ -30,7 +30,8 @@ export const Login = () => {
     }),
 
     onSubmit: () => {
-      console.log('ok');
+      console.log(login);
+      login();
     },
   });
 
