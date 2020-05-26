@@ -1,13 +1,18 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
+
 import TextField from '@material-ui/core/TextField';
 import { makeStyles } from '@material-ui/core/styles';
 import { Button } from '@material-ui/core';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
+import { CONTACTS } from '../../constants/pathnames';
+
 import './Login.scss';
 
 export const Login = ({ login }) => {
+  const history = useHistory();
   const useStyles = makeStyles({
     root: {
       marginTop: '25px',
@@ -30,8 +35,8 @@ export const Login = ({ login }) => {
     }),
 
     onSubmit: () => {
-      console.log(login);
       login();
+      history.push(CONTACTS);
     },
   });
 
