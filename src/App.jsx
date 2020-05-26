@@ -1,12 +1,12 @@
 import React from 'react';
 
 import './App.scss';
-import { Login } from './component/Login';
+import { Layout } from './component/Layout';
 
 export const App = () => {
   return (
     <div className="App">
-      <Login />
+      <Layout />
     </div>
   );
 };
